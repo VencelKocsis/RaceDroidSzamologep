@@ -57,14 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (v.getId() == R.id.osszeadas)
             {
                 ered = input1 + input2;
-                if (Double.toString(ered).substring(Double.toString(ered).length()- 2).equals(".0"))
-                {
-                    Eredmeny.setText(Double.toString(ered).substring(0, Double.toString(ered).length()- 2));
-                }
-                else
-                {
-                    Eredmeny.setText(Double.toString(ered));
-                }
                 sign.setText("+");
                 Eredmeny.setText(df.format(ered));
             }
@@ -72,14 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (v.getId() == R.id.kivonas)
             {
                 ered = input1 - input2;
-                if (Double.toString(ered).substring(Double.toString(ered).length()- 2).equals(".0"))
-                {
-                    Eredmeny.setText(Double.toString(ered).substring(0, Double.toString(ered).length()- 2));
-                }
-                else
-                {
-                    Eredmeny.setText(Double.toString(ered));
-                }
                 sign.setText("-");
                 Eredmeny.setText(df.format(ered));
             }
@@ -87,14 +71,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (v.getId() == R.id.szorzas)
             {
                 ered = input1 * input2;
-                if (Double.toString(ered).substring(Double.toString(ered).length()- 2).equals(".0"))
-                {
-                    Eredmeny.setText(Double.toString(ered).substring(0, Double.toString(ered).length()- 2));
-                }
-                else
-                {
-                    Eredmeny.setText(Double.toString(ered));
-                }
                 sign.setText("*");
                 Eredmeny.setText(df.format(ered));
             }
@@ -108,14 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                 {
                     ered = input1 / input2;
-                    if (Double.toString(ered).substring(Double.toString(ered).length()- 2).equals(".0"))
-                    {
-                        Eredmeny.setText(Double.toString(ered).substring(0, Double.toString(ered).length()- 2));
-                    }
-                    else
-                    {
-                        Eredmeny.setText(Double.toString(ered));
-                    }
                     sign.setText("/");
                     Eredmeny.setText(df.format(ered));
                 }
