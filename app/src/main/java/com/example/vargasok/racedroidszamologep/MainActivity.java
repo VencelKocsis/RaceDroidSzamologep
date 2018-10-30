@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        if (ETinput1.getText().toString().isEmpty() || ETinput2.getText().toString().isEmpty()) {
+        if (ETinput1.getText().toString().isEmpty() || ETinput2.getText().toString().isEmpty())
+        {
             Toast.makeText(getApplicationContext(), "Legalább az egyik mezőbe nem került szám.", Toast.LENGTH_SHORT).show();
             Eredmeny.setText("");
             return;
