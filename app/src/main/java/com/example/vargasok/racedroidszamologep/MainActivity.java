@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         catch (Exception e)
         {
-            Toast.makeText(getApplicationContext(), "Szamot kell begepelni", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Számot kell begépelni", Toast.LENGTH_SHORT).show();
         }
     }
 }
