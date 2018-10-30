@@ -61,10 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
                     Eredmeny.setText(Double.toString(ered).substring(0, Double.toString(ered).length()- 2));
                 }
-                /*else if ()
-                {
-
-                }*/
                 else
                 {
                     Eredmeny.setText(Double.toString(ered));
