@@ -15,7 +15,7 @@
         android:layout_marginTop="24dp"
         android:layout_weight=".5"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
         android:layout_marginRight="16dp"
         android:layout_weight=".5"
         android:ems="10"
-        android:inputType="phone"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

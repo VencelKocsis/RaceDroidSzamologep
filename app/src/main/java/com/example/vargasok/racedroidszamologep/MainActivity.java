@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             double input2 = Double.parseDouble(ETinput2.getText().toString());
             double ered = 0;
             sign.setText("");
-            DecimalFormat df = new DecimalFormat("#,###,###,###");
+            DecimalFormat df = new DecimalFormat("#,###,###,###.###########");
 
             if (v.getId() == R.id.osszeadas)
             {
@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Eredmeny.setText(Double.toString(ered));
                 }
                 sign.setText("-");
+                Eredmeny.setText(df.format(ered));
             }
 
             if (v.getId() == R.id.szorzas)
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Eredmeny.setText(Double.toString(ered));
                 }
                 sign.setText("*");
+                Eredmeny.setText(df.format(ered));
             }
 
             if (v.getId() == R.id.osztas)
@@ -115,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Eredmeny.setText(Double.toString(ered));
                     }
                     sign.setText("/");
+                    Eredmeny.setText(df.format(ered));
                 }
             }
 
