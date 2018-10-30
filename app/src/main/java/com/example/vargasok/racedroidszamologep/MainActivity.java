@@ -101,7 +101,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Eredmeny.setText(df.format(ered));
             }
         }
-
     }
-
 }
