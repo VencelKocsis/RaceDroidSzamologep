@@ -26,15 +26,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        osszeadas = (Button) findViewById(R.id.osszeadas);
-        kivonas = (Button) findViewById(R.id.kivonas);
-        szorzas = (Button) findViewById(R.id.szorzas);
-        osztas = (Button) findViewById(R.id.osztas);
+        osszeadas = findViewById(R.id.osszeadas);
+        kivonas = findViewById(R.id.kivonas);
+        szorzas = findViewById(R.id.szorzas);
+        osztas = findViewById(R.id.osztas);
 
-        ETinput1 = (EditText) findViewById(R.id.input1);
-        ETinput2 = (EditText) findViewById(R.id.input2);
-        Eredmeny = (TextView) findViewById(R.id.textView);
-        sign = (TextView) findViewById(R.id.sign);
+        ETinput1 = findViewById(R.id.input1);
+        ETinput2 = findViewById(R.id.input2);
+        Eredmeny = findViewById(R.id.textView);
+        sign = findViewById(R.id.sign);
 
         osszeadas.setOnClickListener(this);
         kivonas.setOnClickListener(this);
@@ -52,54 +52,56 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        try
-        {
-            Eredmeny.setText("");
-            double input1 = Double.parseDouble(ETinput1.getText().toString());
-            double input2 = Double.parseDouble(ETinput2.getText().toString());
-            double ered = 0;
-            sign.setText("");
-            DecimalFormat df = new DecimalFormat("#,###,###,###.###########");
 
-            if (v.getId() == R.id.osszeadas)
-            {
-                ered = input1 + input2;
-                sign.setText("+");
-                Eredmeny.setText(df.format(ered));
-            }
-
-            if (v.getId() == R.id.kivonas)
-            {
-                ered = input1 - input2;
-                sign.setText("-");
-                Eredmeny.setText(df.format(ered));
-            }
-
-            if (v.getId() == R.id.szorzas)
-            {
-                ered = input1 * input2;
-                sign.setText("*");
-                Eredmeny.setText(df.format(ered));
-            }
-
-            if (v.getId() == R.id.osztas)
-            {
-                if (input2 == 0)
-                {
-                    Toast.makeText(getApplicationContext(), "0-val nem lehet osztani!", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    ered = input1 / input2;
-                    sign.setText("/");
-                    Eredmeny.setText(df.format(ered));
-                }
-            }
-
-        }
-        catch (Exception e)
+        if (!ETinput1.getText().toString().matches("^[0-9.]*$") || !ETinput2.getText().toString().matches("^[0-9.]*$"))
         {
             Toast.makeText(getApplicationContext(), "Számot kell begépelni", Toast.LENGTH_SHORT).show();
+            Eredmeny.setText("");
+            return;
         }
+
+        Eredmeny.setText("");
+        double input1 = Double.parseDouble(ETinput1.getText().toString());
+        double input2 = Double.parseDouble(ETinput2.getText().toString());
+        double ered = 0;
+        sign.setText("");
+        DecimalFormat df = new DecimalFormat("#,###,###,###.###########");
+
+        if (v.getId() == R.id.osszeadas)
+        {
+            ered = input1 + input2;
+            sign.setText("+");
+            Eredmeny.setText(df.format(ered));
+        }
+
+        if (v.getId() == R.id.kivonas)
+        {
+            ered = input1 - input2;
+            sign.setText("-");
+            Eredmeny.setText(df.format(ered));
+        }
+
+        if (v.getId() == R.id.szorzas)
+        {
+            ered = input1 * input2;
+            sign.setText("*");
+            Eredmeny.setText(df.format(ered));
+        }
+
+        if (v.getId() == R.id.osztas)
+        {
+            if (input2 == 0)
+            {
+                Toast.makeText(getApplicationContext(), "0-val nem lehet osztani!", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                ered = input1 / input2;
+                sign.setText("/");
+                Eredmeny.setText(df.format(ered));
+            }
+        }
+
     }
+
 }
