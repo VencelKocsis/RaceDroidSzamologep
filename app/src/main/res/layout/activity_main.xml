@@ -16,6 +16,7 @@
         android:layout_weight=".5"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:theme="@style/AlertDialog.AppCompat.Light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,6 +58,7 @@
         android:layout_marginLeft="48dp"
         android:layout_marginTop="8dp"
         android:text="+"
+        android:background="@drawable/gradient"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -70,6 +72,7 @@
         android:layout_marginRight="48dp"
         android:text="-"
         android:textSize="30sp"
+        android:background="@drawable/gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -82,16 +85,18 @@
         android:layout_marginTop="20dp"
         android:text="*"
         android:textSize="30sp"
+        android:background="@drawable/gradient"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/osszeadas" />
 
     <Button
         android:id="@+id/osztas"
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
+        android:background="@drawable/gradient"
         android:text="/"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
